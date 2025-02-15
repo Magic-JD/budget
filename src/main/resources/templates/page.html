@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<body class="background wrapper" id="mainBody">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, interactive-widget=resizes-content">
+    <script src="https://unpkg.com/htmx.org@2.0.4"></script>
+    <link th:rel="stylesheet" th:href="@{/styles/style.css}"/>
+    <title>Budget</title>
+</head>
+<main>
+    <form onsubmit="return false;">
+        <select id="type" name="type">
+            <option value="">Select a type</option>
+            <option th:each="type : ${types}"
+                    th:value="${type}"
+                    th:text="${type}">
+            </option>
+        </select>
+        <input
+                type="number"
+                id="amount"
+                name="amount"
+        >
+        <input
+                type="text"
+                id="Comment"
+                placeholder="Optional Comment"
+                name="comment"
+        >
+        <button
+                hx-put="/budget/out"
+                hx-include="[name=type], [name=amount], [name=comment]"
+                hx-target="#results"
+                hx-trigger="click">
+            Submit
+        </button>
+    </form>
+    <div id="results">
+        <!-- Results from the server will load here -->
+    </div>
+</main>
+</body>
+</html>
+
