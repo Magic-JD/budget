@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: budget
+
+application:
+  password: ${APPLICATION_PASSWORD}

@@ -13,4 +13,9 @@ public class PageController {
         model.addAttribute("types", LineType.values());
         return "page";
     }
+
+    @GetMapping("/login")
+    String getLogin(){
+        return "login";
+    }
 }

@@ -86,8 +86,15 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<excludes>
+                <configuration>
+                    <image>
+                        <builder>paketobuildpacks/builder-jammy-buildpackless-tiny</builder>
+                        <buildpacks>
+                            <buildpack>paketobuildpacks/oracle</buildpack>
+                            <buildpack>paketobuildpacks/java-native-image</buildpack>
+                        </buildpacks>
+                    </image>
+                    <excludes>
 						<exclude>
 							<groupId>org.projectlombok</groupId>
 							<artifactId>lombok</artifactId>

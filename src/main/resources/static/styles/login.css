@@ -1,0 +1,101 @@
+/* General body styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Form container */
+.login-form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+}
+
+/* Heading */
+.login-form h1 {
+    margin-bottom: 1.5rem;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Error and logout messages */
+.login-form .error-message,
+.login-form .logout-message {
+    padding: 10px;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.login-form .error-message {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+.login-form .logout-message {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+/* Input fields */
+.login-form input[type="password"] {
+    width: calc(100% - 24px);
+    padding: 12px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.login-form input[type="password"]:focus {
+    border-color: #6a11cb;
+    outline: none;
+}
+
+/* Submit button */
+.login-form input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: #6a11cb;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.login-form input[type="submit"]:hover {
+    background: #2575fc;
+}
+
+/* Hidden input field */
+.login-form input[type="hidden"] {
+    display: none;
+}
+
+/* Placeholder styling */
+::placeholder {
+    color: #999;
+    opacity: 1; /* Fix for Firefox */
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    .login-form {
+        padding: 1.5rem;
+    }
+}
