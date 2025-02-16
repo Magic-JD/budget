@@ -24,7 +24,9 @@ public class BudgetController {
     @HxRequest
     String outItem(@RequestParam LineType type, @RequestParam long amount, @RequestParam String comment){
         BudgetLine budgetLine = new BudgetLine(type, new Money(amount), comment);
-        budgetService.outBudget(budgetLine);
+        if(!budgetService.outBudget(budgetLine)){
+            return "fail";
+        }
         return "result";
     }
 }

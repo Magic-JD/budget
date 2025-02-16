@@ -6,3 +6,5 @@ spring:
 
 application:
   password: ${APPLICATION_PASSWORD}
+  sheet-id: ${SHEET_ID}
+  google-secret: ${GOOGLE_SECRET}
