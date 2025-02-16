@@ -14,18 +14,17 @@ body {
 /* Form container */
 .login-form {
     background: #fff;
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    max-width: 350px;
+    width: 80%;
     text-align: center;
 }
 
 /* Heading */
 .login-form h1 {
     margin-bottom: 1.5rem;
-    font-size: 24px;
+    font-size: 40px;
     color: #333;
 }
 
@@ -50,12 +49,12 @@ body {
 
 /* Input fields */
 .login-form input[type="password"] {
-    width: calc(100% - 24px);
-    padding: 12px;
+    width: 90%;
+    padding: 20px;
     margin-top: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 30px;
     transition: border-color 0.3s ease;
 }
 
@@ -73,7 +72,7 @@ body {
     color: #fff;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 30px;
     cursor: pointer;
     transition: background 0.3s ease;
 }
@@ -91,11 +90,4 @@ body {
 ::placeholder {
     color: #999;
     opacity: 1; /* Fix for Firefox */
-}
-
-/* Responsive design */
-@media (max-width: 480px) {
-    .login-form {
-        padding: 1.5rem;
-    }
 }
