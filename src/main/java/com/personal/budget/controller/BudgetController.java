@@ -23,7 +23,7 @@ public class BudgetController {
     @PutMapping("out")
     @HxRequest
     String outItem(@RequestParam LineType type, @RequestParam long amount, @RequestParam String comment){
-        BudgetLine budgetLine = new BudgetLine(type, new Money(amount), comment);
+        BudgetLine budgetLine = new BudgetLine(type, new Money(amount * 1_000), comment);
         if(!budgetService.outBudget(budgetLine)){
             return "fail";
         }

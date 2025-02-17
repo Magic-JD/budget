@@ -17,11 +17,15 @@
                     th:text="${type}">
             </option>
         </select>
-        <input
-                type="number"
-                id="amount"
-                name="amount"
-        >
+        <div class="amount-container">
+            <input
+                    type="number"
+                    id="amount"
+                    placeholder="Enter amount in thousands"
+                    name="amount"
+            >
+            <span class="amount-suffix">000rp</span>
+        </div>
         <input
                 type="text"
                 id="Comment"
