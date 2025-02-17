@@ -1,4 +1,11 @@
 spring:
+  jpa:
+    database-platform: org.hibernate.community.dialect.SQLiteDialect
+    show-sql: true
+    hibernate.ddl-auto: update
+  datasource:
+    url: jdbc:sqlite:mydatabase.db
+    driver-class-name: org.sqlite.JDBC
   config:
     import: optional:file:project.env[.properties]
   application:
@@ -8,3 +15,5 @@ application:
   password: ${APPLICATION_PASSWORD}
   sheet-id: ${SHEET_ID}
   google-secret: ${GOOGLE_SECRET}
+
+

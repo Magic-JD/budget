@@ -43,6 +43,13 @@
     <div id="results">
         <!-- Results from the server will load here -->
     </div>
+    <div id="latest">
+        <div th:each="entry : ${latest}" class="entry">
+            <div><strong>Type:</strong> <span th:text="${entry.type.name()}"></span></div>
+            <div><strong>Amount:</strong> <span th:text="${entry.money.amount()} + 'rp'"></span></div>
+            <div><strong>Comment:</strong> <span th:text="${entry.comment}"></span></div>
+        </div>
+    </div>
 </main>
 </body>
 </html>

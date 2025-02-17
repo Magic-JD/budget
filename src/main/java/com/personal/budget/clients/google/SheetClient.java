@@ -21,9 +21,9 @@ public class SheetClient {
         this.sheetId = sheetId;
     }
 
-    public boolean updateSheet(BudgetLine budgetLine) {
+    public boolean updateSheet(BudgetLine budgetLine, ZonedDateTime currentTime) {
         ValueRange body = new ValueRange()
-                .setValues(List.of(List.of(budgetLine.type().name(), budgetLine.money().amount(), budgetLine.comment(), ZonedDateTime.now().toLocalDate().toString())));
+                .setValues(List.of(List.of(budgetLine.type().name(), budgetLine.money().amount(), budgetLine.comment(), currentTime.toLocalDate().toString())));
         try {
             sheets.spreadsheets().values()
                     .append(sheetId, "A1", body)

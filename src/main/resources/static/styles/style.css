@@ -79,6 +79,17 @@ button {
     opacity: 1;
     animation: fadeOut 5s forwards;
 }
+.entry {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #f9f9f9;
+}
+
+.entry div {
+    margin: 5px 0;
+}
 
 @keyframes fadeOut {
   0% {

@@ -1,1 +1,8 @@
 <div class="results"> Result updated successfully</div>
+<div id="latest" hx-swap-oob="true">
+    <div th:each="entry : ${latest}" class="entry">
+        <div><strong>Type:</strong> <span th:text="${entry.type.name()}"></span></div>
+        <div><strong>Amount:</strong> <span th:text="${entry.money.amount()} + 'rp'"></span></div>
+        <div><strong>Comment:</strong> <span th:text="${entry.comment}"></span></div>
+    </div>
+</div>

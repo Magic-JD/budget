@@ -31,3 +31,4 @@ replay_pid*
 .settings/*
 target/*
 project.env
+mydatabase.db
