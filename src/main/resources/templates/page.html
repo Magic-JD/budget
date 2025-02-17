@@ -9,7 +9,7 @@
     <title>Budget</title>
 </head>
 <main>
-    <form onsubmit="return false;">
+    <form hx-on::after-request="this.reset()">
         <select id="type" name="type">
             <option value="">Select a type</option>
             <option th:each="type : ${types}"
