@@ -69,7 +69,10 @@ button {
 }
 
 .results {
-    margin-top: 20px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    margin-top: 0;
     padding: 15px;
     border-radius: 5px;
     background-color: #f8f9fa;
@@ -78,7 +81,9 @@ button {
     font-size: 16px;
     opacity: 1;
     animation: fadeOut 5s forwards;
+    z-index: 1000;
 }
+
 .entry {
     border: 1px solid #ddd;
     border-radius: 5px;
