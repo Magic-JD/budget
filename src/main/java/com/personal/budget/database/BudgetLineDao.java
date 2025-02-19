@@ -56,4 +56,8 @@ public class BudgetLineDao {
                 .comment(budgetLine.comment())
                 .date(currentTime.toEpochSecond()).build();
     }
+
+    public boolean isEmpty() {
+        return repository.count() == 0;
+    }
 }
